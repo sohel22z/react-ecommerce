@@ -1,15 +1,9 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-
-interface Products {
-    id: number;
-    image: string;
-    title: string;
-    price: number;
-}
+import { IProduct } from "../../../types/productTypes";
 
 interface ProductContainerProps {
-    product: Products;
+    product: IProduct;
 }
 
 const ProductContainer: React.FC<ProductContainerProps> = ({product}) => {

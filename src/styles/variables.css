@@ -33,9 +33,9 @@
 }
 
 .cat-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    background-color: darkorchid;
+    background-color: #78909c;
     padding: 10px;
     border-radius: 8px;
     color: white;
@@ -43,8 +43,12 @@
 }
 
 .btn-primary {
-    --bs-btn-bg: darkorchid;
-    --bs-btn-border-color: darkorchid;
-    --bs-btn-disabled-bg: darkorchid;
-    --bs-btn-disabled-border-color: darkorchid;
+    --bs-btn-bg: #78909c;
+    --bs-btn-border-color: #78909c;
+    --bs-btn-disabled-bg: #78909c;
+    --bs-btn-disabled-border-color: #78909c;
+}
+
+.navbar.navbar-dark .nav-link {
+    color: #fff;
 }

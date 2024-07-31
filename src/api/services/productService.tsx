@@ -1,7 +1,8 @@
+import { IProduct } from "../../types/productTypes";
 import client from "../client";
 import { PRODUCT, PRODUCTS } from "../endpoints";
 
-export const fetchProducts = async () => {
+export const fetchProducts = async (): Promise<IProduct[]> => {
     try {
         const response = await client.get(PRODUCTS);
         return response.data;
