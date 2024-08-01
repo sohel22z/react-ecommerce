@@ -1,4 +1,4 @@
-import { IProduct } from "../../types/productTypes";
+import { IProduct } from "../../types";
 import client from "../client";
 import { PRODUCT, PRODUCTS } from "../endpoints";
 

@@ -1,12 +1,12 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { IProduct } from "../../../types/productTypes";
+import { IProduct } from '../../../types'
+import { Box, Button, Flex } from "@radix-ui/themes";
 
 interface ProductContainerProps {
     product: IProduct;
 }
 
-const ProductContainer: React.FC<ProductContainerProps> = ({product}) => {
+const ProductContainer: React.FC<ProductContainerProps> = ({ product }) => {
     return (
         <>
             <div className="product-container" key={product.id}>
@@ -14,14 +14,14 @@ const ProductContainer: React.FC<ProductContainerProps> = ({product}) => {
                     <img src={`${product.image}`} alt="" />
                     <h6 className="title">{product.title}</h6>
                 </div>
-                <div className="d-flex flex-sm-row flex-column align-items-sm-center justify-content-between gap-2">
-                    <div className="price">
+                <Flex align='center' justify='between' gap='3'>
+                    <Box className='price'>
                         {`$ ${product.price}`}
-                    </div>
-                    <Button className="py-0" size="sm">
+                    </Box>
+                    <Button size={"4"} variant="solid">
                         Add +
                     </Button>
-                </div>
+                </Flex>
             </div>
         </>
     )
