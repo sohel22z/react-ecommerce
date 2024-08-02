@@ -9,7 +9,7 @@
 }
 
 .product-container img {
-    width: 100%;
+    width: -webkit-fill-available;
     height: 150px;
     object-fit: contain;
     border-radius: 6px;

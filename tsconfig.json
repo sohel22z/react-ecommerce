@@ -1,6 +1,6 @@
 {
   "files": [],
-  "paths": {
+  "path": {
     "*": ["types/*"]
   },
   "references": [

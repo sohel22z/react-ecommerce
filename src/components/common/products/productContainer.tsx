@@ -1,6 +1,6 @@
+import { Box, Button, Flex, Heading, Text } from "@radix-ui/themes";
 import React from "react";
-import { IProduct } from '../../../types'
-import { Box, Button, Flex } from "@radix-ui/themes";
+import { IProduct } from '../../../types';
 
 interface ProductContainerProps {
     product: IProduct;
@@ -9,20 +9,20 @@ interface ProductContainerProps {
 const ProductContainer: React.FC<ProductContainerProps> = ({ product }) => {
     return (
         <>
-            <div className="product-container" key={product.id}>
+            <Box className="product-container" key={product.id}>
                 <div>
                     <img src={`${product.image}`} alt="" />
-                    <h6 className="title">{product.title}</h6>
+                    <Text as="span" size='3' className="title" >{product.title}</Text>
                 </div>
-                <Flex align='center' justify='between' gap='3'>
+                <Flex align='center' justify='between' gap='1'>
                     <Box className='price'>
                         {`$ ${product.price}`}
                     </Box>
-                    <Button size={"4"} variant="solid">
+                    <Button size={"2"} variant="solid">
                         Add +
                     </Button>
                 </Flex>
-            </div>
+            </Box>
         </>
     )
 }

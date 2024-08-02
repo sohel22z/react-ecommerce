@@ -3,7 +3,7 @@ import { fetchProducts } from '../api/services/productService';
 import ProductContainer from "../components/common/products/productContainer";
 import HeaderMain from "../components/layout/header/headerMain";
 import { IProduct, IProductCategory } from '../types/index';
-import { Box, Container, Flex, Grid, Section } from '@radix-ui/themes';
+import { Box, Container, Flex, Grid } from '@radix-ui/themes';
 
 const HomePage: React.FC = () => {
 
@@ -37,34 +37,36 @@ const HomePage: React.FC = () => {
   }, []);
 
   if (loading) {
-    return <div className="d-flex justify-content-center align-items-center vh-100">Loading...</div>;
+    return <Flex justify='center' align='center' height='100vh'>Loading...</Flex>
   }
 
   if (error) {
-    return <div className="d-flex justify-content-center align-items-center vh-100">Error: {error}</div>;
+    return <Flex justify='center' align='center' height='100vh'>Error: {error}</Flex>;
   }
 
   return (
     <>
-      {/* <HeaderMain /> */}
-      <div className='mb-5'>
-        <div className='container'>
-          {Object.keys(productCategories).map((category) => (
-            <Flex direction='column' key={category}>
-              <Box width='100%'>
-                <h1 className="cat-title">{category}</h1>
-              </Box>
-              <Grid columns={{ initial:'1', xs:'3', sm:'4', md: '4', lg:'5'}} gapX="5" gapY='9'>
+      <HeaderMain />
+      <Container mb='6'>
+        {Object.keys(productCategories).map((category) => (
+          <>
+            <Box key={category}>
+              <Flex direction='column'>
+                <Box width='100%'>
+                  <h1 className="cat-title">{category}</h1>
+                </Box>
+              </Flex>
+              <Grid columns={{ initial: '1', xs: '3', sm: '4', md: '4', lg: '5' }} gap='15px'>
                 {productCategories[category].map((product) => (
-                  <div key={product.id}>
+                  <Box key={product.id}>
                     <ProductContainer product={product} />
-                  </div>
+                  </Box>
                 ))}
               </Grid>
-            </Flex>
-          ))}
-        </div>
-      </div>
+            </Box>
+          </>
+        ))}
+      </Container>
     </>
   )
 }
