@@ -1,0 +1,1 @@
+import{j as r}from"./index-BU7IkVbR.js";import{p as t,h as e}from"./flex-Cn59PdKj.js";const a=()=>r.jsx(t,{justify:"center",align:"center",height:"100vh",children:r.jsx(e,{as:"h1",size:"6",children:"Your cart is empty!"})});export{a as default};
