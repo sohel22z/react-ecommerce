@@ -1,9 +1,9 @@
+import { Box, Container, Flex, Grid } from '@radix-ui/themes';
 import React, { useEffect, useState } from 'react';
 import { fetchProducts } from '../api/services/productService';
 import ProductContainer from "../components/common/products/productContainer";
 import HeaderMain from "../components/layout/header/headerMain";
 import { IProduct, IProductCategory } from '../types/index';
-import { Box, Container, Flex, Grid } from '@radix-ui/themes';
 
 const HomePage: React.FC = () => {
 
@@ -71,4 +71,4 @@ const HomePage: React.FC = () => {
   )
 }
 
-export default HomePage;
+export default HomePage;  
