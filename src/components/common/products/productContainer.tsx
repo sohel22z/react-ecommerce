@@ -7,7 +7,6 @@ interface ProductContainerProps {
 }
 
 const ProductContainer: React.FC<ProductContainerProps> = ({ product }) => {
-
     return (
         <Box className="product-container" key={product.id}>
             <div>
@@ -18,10 +17,7 @@ const ProductContainer: React.FC<ProductContainerProps> = ({ product }) => {
                 <Box className='price'>
                     {`$ ${product.price}`}
                 </Box>
-                <Button 
-                    size={"2"} 
-                    variant="outline"
-                >
+                <Button size={"2"} variant="solid">
                     Add +
                 </Button>
             </Flex>
