@@ -12,11 +12,13 @@
   "dependencies": {
     "@million/lint": "^1.0.0-rc.84",
     "@radix-ui/themes": "^3.1.1",
+    "@reduxjs/toolkit": "^2.6.1",
     "@tanstack/react-query": "^5.51.16",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
     "react-router": "^6.25.1",
     "react-router-dom": "^6.25.1"
   },

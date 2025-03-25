@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <>
       <QueryClientProvider client={queryClient}>
         <Theme accentColor='sky' grayColor='sand' radius='large' scaling='95%' appearance='light' panelBackground='solid'>
-          <AppRoutes />
+            <AppRoutes />
           {/* <ThemePanel/> */}
         </Theme>
       </QueryClientProvider>
